@@ -1,0 +1,286 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	background-color: #ABC;
+
+}
+
+
+
+header {
+	background-image: linear-gradient(red, black);
+	height: 120px;
+	border-bottom: 2px solid white;
+}
+
+h1{
+	text-align: center;
+	line-height: 90px;
+	color: pink;
+	
+
+}
+
+p {
+	color: lightpink;
+
+}
+
+article {
+	width: 80%;
+	margin: 30px auto;
+	padding: 10px;
+	border: 4px solid #500;
+	border-radius: 20px;
+	overflow: hidden;
+	min-height: 260px; /*-- frame 5 --*/
+}
+
+
+
+h2 {
+	color: white;
+} 
+
+	/*-- nav 1 --*/
+
+#nav1 {
+
+}
+
+
+#nav1 ul {
+	list-style-type: none;
+	/*-- border: 2px solid yellow;  frame 3 removed at frame 6 --*/
+}
+
+#nav1 li {
+	/*-- outline: 2px solid green; frame 2 border to outline frame 6 removed frame 9 --*/
+	float: left; /*-- floating made the box's shorter --*/
+	position: relative; /*-- frame 4 --*/
+	margin-right: 10px; /*-- frame 7 --*/
+	/*-- margin-bottom: 6px; frame 7 removed frame 9 --*/
+	margin-top: 6px;
+}
+
+#nav1 a {
+		/*-- frame 2 --*/
+	display: block; /*-- This creates --*/
+	width: 120px;   /*-- Box --*/
+	height: 40px;   /*-- Size --*/
+	/*-- border: 2px solid black;  Shows Size removed frame 6 --*/
+	background-color: #EEE; /*-- Added for frame 6 --*/
+}
+
+#nav1 li > ul {
+	position: absolute; /*-- frame 4 --*/
+	top: 40px; left: 0px;/*-- frame 6 set top to 45px note that "a height =40px frame 9--*/
+	display: none; /*-- frame 8 --*/
+}
+
+#nav1 li:hover > ul {
+	display: block;/*-- appear on hover after frame 8 --*/
+}
+
+ /*-- nav 2 --*/
+
+  #nav2 ul {
+	list-style-type: none;
+}
+
+#nav2 li {
+	float: left; 
+	position: relative;
+	margin-right: 10px; 
+	margin-top: 6px;
+}
+
+#nav2 a {
+	display: block; 
+	width: 120px;   
+	height: 40px; 
+	background-color: #EEE; 
+}
+
+#nav2 a:hover {
+	background-color: #FF0;
+}
+
+#nav2 li > ul {
+	position: absolute; 
+	top: 40px; left: 0px; 
+	display: none; 
+}
+
+#nav2 li:hover > ul {
+	display: block;
+}
+
+/*-- nav 2 mobile --*/
+
+@media screen and (max-width: 600px) {
+
+	#nav2 li {
+	float: none;/*-- frame-3 --*/ 
+	position: relative;
+	margin: 10px; /*-- frame-4 --*/ 
+	
+}
+
+#nav2 a {
+	display: block; 
+	width: 100%;   
+	height: 30px; 
+	 
+}
+
+#nav2 li > ul {
+	position: static;/*-- frame 6 --*/  
+	display: none; 
+}
+
+#nav2 li:hover > ul {
+	display: block;
+}
+	
+} /*-- End of mediascreen max600px --*/
+
+ /*-- nav 3 --*/
+
+ #nav3 ul {
+ 	list-style-type: none;
+ }
+
+ #nav3 .parent-menu > li {
+	width: 190px;
+	height: 30px;
+	float: left;
+	margin: 0px 5px;
+	position: relative;
+	z-index: 10;
+ }
+
+#nav3 a {
+	display: block;
+	width: 190px;
+	height: 30px;
+	text-align: center;
+	text-decoration: none;
+	border: 2px solid black;
+	border-radius: 4px;
+	line-height: 25px;
+	background-color: #123;
+	color: #EEE;
+} 
+
+#nav3 .sub-menu {
+	position: relative; left: 0px; top: -34px; z-index: -1;
+}
+
+#nav3 .sub-menu > li {
+	width: 190px;
+	height: 30px;
+	position: absolute; left: 0px; top: 0px;
+	transition: top 0.4s ease-in-out;
+	padding-top: 4px; 
+}
+
+#nav3 li:hover .sub-menu li:nth-child(1) {left: 0px; top: 35px;}
+#nav3 li:hover .sub-menu li:nth-child(2) {left: 0px; top: 70px;}
+#nav3 li:hover .sub-menu li:nth-child(3) {left: 0px; top: 105px;}
+#nav3 li:hover .sub-menu li:nth-child(4) {left: 0px; top: 140px;}
+#nav3 li:hover .sub-menu li:nth-child(5) {left: 0px; top: 175px;}
+
+/*-- nav 4 --*/
+
+	
+		
+	/* rules for navigation menu */
+	/* ========================================== */
+	
+	ul#navmenu {
+		width: 645px;
+		margin: 0px auto;
+	}
+
+	ul#navmenu, ul.sub1, ul.sub2 {
+		list-style-type: none;
+		font-size: 9pt;
+		}
+		
+	ul#navmenu li {
+		width: 125px;
+		text-align: center;
+		position: relative;
+		float: left;
+		margin-right: 4px;
+		}
+		
+	ul#navmenu a {
+		text-decoration: none;
+		display: block;
+		width: 125px;
+		height: 25px;
+		line-height: 25px;
+		background-color: #FFF;
+		border: 1px solid #CCC;
+		border-radius: 5px;
+		}
+		
+	ul#navmenu .sub1 li {
+		}
+		
+	ul#navmenu .sub1 a {
+		margin-top: 5px;
+		}
+		
+	ul#navmenu .sub2 a {
+		margin-left: 3px;
+		}
+		
+	ul#navmenu li:hover > a {
+		background-color: #CFC;
+		}
+		
+	ul#navmenu li:hover a:hover {
+		background-color: #FF0;
+		}
+		
+	ul#navmenu ul.sub1 {
+		display: none;
+		position: absolute;
+		top: 26px;
+		left: 0px;
+		}
+		
+	ul#navmenu ul.sub2 {
+		display: none;
+		position: absolute;
+		top: 0px;
+		left: 126px;
+		}
+		
+	ul#navmenu li:hover .sub1 {
+		display: block;
+		}
+		
+	ul#navmenu .sub1 li:hover .sub2 {
+		display: block;
+		}
+		
+	.darrow {
+		font-size: 11pt;
+		position: absolute;
+		top: 5px;
+		right: 4px;
+		}
+		
+	.rarrow {
+		font-size: 13pt;
+		position: absolute;
+		top: 6px;
+		right: 4px;
+		}
