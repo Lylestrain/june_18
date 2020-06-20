@@ -1,0 +1,54 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:url('backdrop.jpg') center/cover no-repeat;
+    font-family:  'Calibri', sans-serif;
+    font-weight: 400;
+}
+
+.images {
+    background: #f15025;
+    flex: 0 0 80%;
+    min-height: 70vh;
+    background:url('bcg-0.jpg') center/cover no-repeat;
+    border-radius: 15px;
+    box-shadow: 5px 10px black;
+    position: relative;
+}
+
+
+.btn{
+    display: inline-block;
+    background: #fff;
+    opacity: 0.8;
+    border-radius: 20%;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    border:3px solid #f15025;
+    box-shadow: 2px 5px #001221;
+    outline: none;
+}
+
+.prevBtn {
+    position: absolute;
+    top: 50%;
+    left: -35px;
+}
+
+.nextBtn {
+    position: absolute;
+    top: 50%;
+    right: -35px;
+}
+
+.btn:hover{
+    background-color: #4caf50;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.btn:active{
+    box-shadow: none;
+}
